@@ -1,0 +1,10 @@
+﻿fastapi
+uvicorn[standard]
+crewai
+langchain
+langchain-community
+langchain-openai
+sqlalchemy
+pymysql
+python-dotenv
+pydantic
