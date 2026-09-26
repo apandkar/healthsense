@@ -1,0 +1,361 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HEADER */
+
+.header {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+.header h1 {
+    margin: 0;
+    color: #1769aa;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 5px 0 0;
+    color: #6b7280;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+    color: #166534;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+.hero h2 {
+    font-size: 34px;
+    margin: 0 0 12px;
+    color: #111827;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* INPUT */
+
+.chat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+.chat-card h2 {
+    margin-top: 0;
+    color: #1769aa;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border-color: #1769aa;
+    box-shadow: 0 0 0 3px rgba(23,105,170,0.12);
+}
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #1769aa;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #12588f;
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* LOADING */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 20px;
+    color: #6b7280;
+}
+
+.spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #ddd;
+    border-top: 3px solid #1769aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* RESULT */
+
+.result {
+    margin-top: 25px;
+}
+
+.emergency-box {
+    background: #fee2e2;
+    border-left: 6px solid #dc2626;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    color: #991b1b;
+}
+
+.emergency-box h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.emergency-box strong {
+    display: block;
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+.triage-box {
+    background: #dcfce7;
+    border-left: 6px solid #22c55e;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+
+.section-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+.section-card h2 {
+    margin-top: 0;
+    color: #1769aa;
+}
+
+/* SPECIALIST */
+
+.specialist-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111827;
+    background: #eff6ff;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+/* GRIDS */
+
+.hospital-grid,
+.doctor-grid,
+.appointment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+/* CARDS */
+
+.hospital-card,
+.doctor-card,
+.appointment-card {
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.hospital-card:hover,
+.doctor-card:hover,
+.appointment-card:hover {
+    box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+
+.hospital-card h3,
+.doctor-card h3,
+.appointment-card h3 {
+    margin-top: 0;
+    color: #1769aa;
+}
+
+.hospital-card p,
+.doctor-card p,
+.appointment-card p {
+    line-height: 1.5;
+}
+
+/* APPOINTMENT */
+
+.appointment-card {
+    border-top: 4px solid #1769aa;
+}
+
+.available-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #166534;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* EMPTY / ERROR */
+
+.empty-box,
+.error-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+}
+
+.error-box {
+    background: #fee2e2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+/* DISCLAIMER */
+
+.disclaimer-box {
+    background: #fef3c7;
+    border-left: 5px solid #f59e0b;
+    padding: 18px;
+    border-radius: 10px;
+    color: #92400e;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.disclaimer-box strong {
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ANIMATION */
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 30px 10px 20px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .chat-card,
+    .section-card {
+        padding: 20px;
+    }
+
+    .hospital-grid,
+    .doctor-grid,
+    .appointment-grid {
+        grid-template-columns: 1fr;
+    }
+}

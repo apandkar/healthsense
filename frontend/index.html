@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKHealthSense - AI Healthcare Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div>
+            <h1>IKHealthSense</h1>
+            <p>AI-Powered Healthcare Navigation</p>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            API Online
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Find the Right Healthcare Support</h2>
+        <p>
+            Describe your symptoms and location. IKHealthSense will assess
+            urgency and help you find relevant healthcare resources.
+        </p>
+    </section>
+
+    <main>
+
+        <div class="chat-card">
+
+            <h2>Check Healthcare</h2>
+
+            <label for="symptoms">
+                Describe your symptoms
+            </label>
+
+            <textarea
+                id="symptoms"
+                rows="5"
+                placeholder="Example: I have chest pain and shortness of breath"
+            ></textarea>
+
+            <label for="location">
+                Your location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Example: Chicago"
+            >
+
+            <button id="checkHealthcare" type="button">
+                Check Healthcare
+            </button>
+
+        </div>
+
+        <div id="loading" class="loading" style="display:none;">
+            <div class="spinner"></div>
+            <span>Analyzing your symptoms...</span>
+        </div>
+
+        <div id="response" class="result"></div>
+
+    </main>
+
+    <footer>
+        <p>
+            IKHealthSense provides healthcare navigation information
+            and does not provide a medical diagnosis.
+        </p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
